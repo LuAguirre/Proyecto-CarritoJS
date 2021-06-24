@@ -43,7 +43,7 @@ function agregarCurso(e) {
 }
 
 // Lee los datos del curso
-function leerDatosCurso(curso) {
+ const leerDatosCurso = function(curso) {
      const infoCurso = {
           imagen: curso.querySelector('img').src,
           titulo: curso.querySelector('h4').textContent,
@@ -113,16 +113,13 @@ function carritoHTML() {
 
 }
 
-function sincronizarStorage() {
+ const sincronizarStorage =function() {
      localStorage.setItem('carrito', JSON.stringify(articulosCarrito));
 }
 
 
 // Elimina los cursos del carrito en el DOM
-function vaciarCarrito() {
-  
-
-
+const vaciarCarrito = function() {
      while(contenedorCarrito.firstChild) {
           contenedorCarrito.removeChild(contenedorCarrito.firstChild);
       }
